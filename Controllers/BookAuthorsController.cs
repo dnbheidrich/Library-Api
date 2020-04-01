@@ -45,7 +45,7 @@ public ActionResult<BookAuthors> Get(int id)
 
 
         // delete
-        [HttpPut]  // api/cartshoes/:shoeCartId
+        [HttpPut]  // api/bookauthors/:bookAuthorId
         public ActionResult<BookAuthors> Delete([FromBody] BookAuthors toRemove)
         {
             try
@@ -62,20 +62,3 @@ public ActionResult<BookAuthors> Get(int id)
 
 
 
-// update
-// [HttpPut("{id}")]
-// public ActionResult<BookAuthors> Update(int id, [FromBody] BookAuthors updatedBookAuthors)
-// {
-//     try
-//     {
-//         updatedBookAuthors.Id = id;
-//         return Ok(_bs.Edit(updatedBookAuthors));
-//     }
-//     catch (Exception e)
-//     {
-//         return BadRequest(e.Message);
-//     }
-// }
-
-
-// get by id
