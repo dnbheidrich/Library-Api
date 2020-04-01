@@ -31,14 +31,17 @@ namespace librayApi
             services.AddControllers();
             // Connection to DB
             services.AddScoped<IDbConnection>(x => CreateDbConnection());
-
+            // Books
             services.AddTransient<BooksService>();
             services.AddTransient<BooksRepository>();
+            // Libraries
             services.AddTransient<LibrariesService>();
             services.AddTransient<LibrariesRepository>();
-             services.AddTransient<AuthorsService>();
+            // Authors
+            services.AddTransient<AuthorsService>();
             services.AddTransient<AuthorsRepository>();
-             services.AddTransient<BookAuthorsService>();
+            // BookAuthors
+            services.AddTransient<BookAuthorsService>();
             services.AddTransient<BookAuthorsRepository>();
 
         }
